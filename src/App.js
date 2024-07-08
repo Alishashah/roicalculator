@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.css'; // or include from a CDN
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import './App.css';
+import Rateofinterest from './Rateofinterest';
+import Rate from './Rate';
+import PieChartExample from './PieChartExample';
+import PieChart from './PieChart';
+import DoughnutsChart from './DoughnutsChart';
+import axios from 'axios';
+import NewChart from './NewChart';
+import Reactrangeslider from './Reactrangeslider';
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Rate/>
+      {/* <Rateofinterest/> */}
+      {/* <NewChart/> */}
+{/* <Reactrangeslider/> */}
+      {/* <DoughnutsChart/> */}
+
     </div>
   );
 }
