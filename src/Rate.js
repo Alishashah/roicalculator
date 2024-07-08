@@ -276,7 +276,19 @@ const Rate = () => {
         min={10}
         max={500}
         step={5}
-
+        sx={{
+          '& .MuiSlider-thumb': {
+            height: 24,
+            width: 24,
+            backgroundColor: ' #00B0FF',
+            border: '3px solid white',
+          },
+          '& .MuiSlider-track': {
+            border: 'none',
+            height: 5,
+            width: 5,
+          },
+        }}
 
       />
       </Box>
@@ -296,6 +308,19 @@ const Rate = () => {
         min={10000}
         max={100000}
         onChange={handleChange1}
+        sx={{
+          '& .MuiSlider-thumb': {
+            height: 24,
+            width: 24,
+            backgroundColor: ' #00B0FF',
+            border: '3px solid white',
+          },
+          '& .MuiSlider-track': {
+            border: 'none',
+            height: 5,
+            width: 5,
+          },
+        }}
 
       />
       </Box>
@@ -308,19 +333,31 @@ const Rate = () => {
         <p className='text-1'>Time : {TimeInvestedinTrackHR} min</p>
 
 
-<Box  sx={{ '& .MuiSlider-valueLabel': { fontSize: '14px', backgroundColor: '#1250ac' ,borderRadius:"30px"} }}>
-      <Slider
+        <Box sx={{ '& .MuiSlider-valueLabel': { fontSize: '14px', backgroundColor: '#1250ac', borderRadius: '30px' } }}>
+       <Slider
         valueLabelDisplay="auto"
         value={TimeInvestedinTrackHR}
         onChange={handleChange3}
         min={5}
         max={60}
         step={1}
-
+        sx={{
+          '& .MuiSlider-thumb': {
+            height: 24,
+            width: 24,
+            backgroundColor: ' #00B0FF',
+            border: '3px solid white',
+          },
+          '& .MuiSlider-track': {
+            border: 'none',
+            height: 5,
+            width: 5,
+          },
+        }}
       />
-      </Box>
+    </Box>
       <div className='cost'>
-        <p>Time Investment Cost = &#8377; {formatIndianNumber(timeinwasted.toFixed(1))}</p>
+        <p>Time Investment Cost = &#8377; {formatIndianNumber(timeinwasted)}</p>
       </div>
        </div>
        <div>
@@ -339,7 +376,7 @@ const Rate = () => {
 
 <div className='text-pos'>
 <h1 className="para-8 mt-5">Want to Get a Breakdown Out of this calculation and achieve similar results ? </h1>
-<img src={imgbutton} className=' img-fluid' style={{width:"250px" ,height:"250px"}} onClick={handleShow}/>
+<img src={imgbutton} className=' img-fluid' style={{width:"240px" ,height:"240px"}} onClick={handleShow}/>
 
 
 { show && <Formreact show={show} handleClose={handleClose}/>}

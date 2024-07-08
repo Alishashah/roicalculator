@@ -36,9 +36,21 @@ const windowwidth=useNavwidth()
 
     return (
       <g>
-        { windowwidth >800 ? <><text x={cx} y={cy - 10} textAnchor="middle" marginTop={20} fill={fill} fontWeight="bold" fontSize={36}>ROI</text>
-        <text x={cx} y={cy + 10} textAnchor="middle" fill={fill} fontSize={20} marginTop={10} fontWeight="bold">{`${300} %`}</text></> : <><text x={cx} y={cy - 10} textAnchor="middle" fill={fill} fontSize={20}>ROI</text>
-        <text x={cx} y={cy + 10} textAnchor="middle" fill={fill} fontSize={10} marginTop={10} fontWeight="bold">{`${300} %`}</text></>}
+        {windowwidth > 800 ? (
+        <>
+          <text x={cx} y={cy - 10} textAnchor="middle" fill={fill} fontWeight="bold" fontSize={40} dominantBaseline="middle">
+            <tspan x={cx} dy="0">ROI</tspan>
+            <tspan x={cx} dy="1.2em" fontSize={24}>{`${300}%`}</tspan>
+          </text>
+        </>
+      ) : (
+        <>
+          <text x={cx} y={cy - 10} textAnchor="middle" fill={fill} fontSize={20} dominantBaseline="middle">
+            <tspan x={cx} dy="0">ROI</tspan>
+            <tspan x={cx} dy="1.2em" fontSize={10}>{`${300}%`}</tspan>
+          </text>
+        </>
+      )}
 
         <Sector
           {...props}
